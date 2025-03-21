@@ -71,8 +71,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: "15F"
-          release_name: "15F"
+          tag_name: "15F1"
+          release_name: "15F1"
           prerelease: false
 
   android_build:
