@@ -62,7 +62,7 @@ jobs:
   create_release:
     needs: check_version
     runs-on: ubuntu-20.04
-    if: needs.check_version.outputs.ALREADY_RELEASE == '1'
+    if: needs.check_version.outputs.ALREADY_RELEASE == '0'
 
     steps:
       - uses: actions/create-release@master
@@ -71,8 +71,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: "${{ needs.check_version.outputs.FRIDA_VERSION }}"
-          release_name: "${{ needs.check_version.outputs.FRIDA_VERSION }}"
+          tag_name: "15"
+          release_name: "15"
           prerelease: false
 
   android_build:
