@@ -71,8 +71,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: "${{ needs.check_version.outputs.FRIDA_VERSION }}"
-          release_name: "${{ needs.check_version.outputs.FRIDA_VERSION }}"
+          tag_name: "${{ needs.check_version.outputs.FRIDA_VERSION }}-pwnmod"
+          release_name: "${{ needs.check_version.outputs.FRIDA_VERSION }}-pwnmod"
           prerelease: false
 
   android_build:
